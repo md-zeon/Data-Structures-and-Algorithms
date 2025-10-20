@@ -14,17 +14,19 @@ Where:
 
 ```mermaid
 flowchart TD
-    Start([Start]) --> InputP[/Enter Principal Amount P/]
-    InputP --> InputR[/Enter Rate of Interest R/]
-    InputR --> InputT[/Enter Time Period T/]
-    InputT --> ValidateInputs{Are all inputs positive numbers?}
+Start([Start]) --> InputP[/Enter Principal Amount P/]
+InputP --> InputR[/Enter Rate of Interest R/]
+InputR --> InputT[/Enter Time Period T/]
+InputT --> ValidateInputs{Are all inputs positive numbers?}
 
-    ValidateInputs -->|No| DisplayError[/Display "Error: All values must be positive"/]
-    DisplayError --> End([End])
 
-    ValidateInputs -->|Yes| CalculateSI[Calculate SI = (P × R × T) / 100]
-    CalculateSI --> DisplayResult[/Display Simple Interest and Total Amount/]
-    DisplayResult --> End([End])
+ValidateInputs -->|No| DisplayError[/Display "Error: All values must be positive"/]
+DisplayError --> End([End])
+
+
+ValidateInputs -->|Yes| CalculateSI([Calculate SI = (P × R × T) / 100])
+CalculateSI --> DisplayResult[/Display Simple Interest and Total Amount/]
+DisplayResult --> End([End])
 ```
 
 ## Pseudocode
