@@ -23,6 +23,15 @@ public class Problems {
         int userSum = num1 + num2;
         System.out.println("Sum of " + num1 + " and " + num2 + " is: " + userSum);
         
+
+        // Calculate the Product of two floating-point numbers
+        System.out.print("Enter first floating-point number: ");
+        float floatNum1 = scanner.nextFloat();
+        System.out.print("Enter second floating-point number: ");
+        float floatNum2 = scanner.nextFloat();
+        float product = floatNum1 * floatNum2;
+        System.out.println("Product of " + floatNum1 + " and " + floatNum2 + " is: " + product);
+        
         scanner.close();
     }
 }
