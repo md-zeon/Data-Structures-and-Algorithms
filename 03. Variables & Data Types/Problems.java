@@ -1,3 +1,4 @@
+import java.util.*;
 public class Problems {
     public static void main(String[] args) {
         //  Problem 1: Calculate the sum of two integers
@@ -12,5 +13,16 @@ public class Problems {
          * - The values are stored in the stack memory as they are primitive data types.
          * - When the program ends, the memory allocated for these variables is released.
         */
+
+        // Problem 2: Calculate the sum of two integers using user input
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter first integer: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Enter second integer: ");
+        int num2 = scanner.nextInt();
+        int userSum = num1 + num2;
+        System.out.println("Sum of " + num1 + " and " + num2 + " is: " + userSum);
+        
+        scanner.close();
     }
 }
