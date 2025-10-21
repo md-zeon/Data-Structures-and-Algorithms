@@ -52,7 +52,13 @@ public class Practice {
          * Therefore, result = 12.56 + 10.309278350515464 - 51197.3248 = -51174.45552164948454
          */
 
-         
+        // ? Question 5: Will the following code snippet give any error? If yes, why?
+
+        int $ = 24;
+        System.out.println("$ = " + $);
+        // No error will occur. In Java, variable names can start with a letter, underscore (_), or dollar sign ($).
+
+
         scanner.close();
     }
 }
