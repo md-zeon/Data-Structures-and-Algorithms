@@ -35,6 +35,24 @@ public class Practice {
         float gst = totalCost * 0.18f;
         System.out.println("Total cost after 18% GST = " + (totalCost + gst));
 
+        // ? Question 4: Find out the output of the following code snippet:
+        byte b = 4;
+        char c = 'a';
+        short s = 512;
+        int i = 1000;
+        float f = 3.14f;
+        double d = 99.9954;
+        double result = (f * b) + (i / c) - (d * s);
+        System.out.println("Output of the code snippet = " + result);
+        /*
+         * Explanation:
+         * f * b = 3.14 * 4 = 12.56
+         * i / c = 1000 / 97 (ASCII value of 'a') = 10.309278350515464
+         * d * s = 99.9954 * 512 = 51197.3248
+         * Therefore, result = 12.56 + 10.309278350515464 - 51197.3248 = -51174.45552164948454
+         */
+
+         
         scanner.close();
     }
 }
