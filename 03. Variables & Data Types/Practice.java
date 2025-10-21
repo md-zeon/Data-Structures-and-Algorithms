@@ -20,6 +20,21 @@ public class Practice {
         float area = side * side;
         System.out.println("Area of the square = " + area);
 
+        // ? Question 3: Enter cost of 3 items from the user (using float data type) - a pencil, a pen and an eraser. You have to output the total cost of the items back to the user as their bill. (Add on : You can also try adding 18% gst tax to the items in the bill as an advanced problem)
+        System.out.print("Enter cost of pencil: ");
+        float pencilCost = scanner.nextFloat();
+        System.out.print("Enter cost of pen: ");
+        float penCost = scanner.nextFloat();
+        System.out.print("Enter cost of eraser: ");
+        float eraserCost = scanner.nextFloat();
+
+        float totalCost = pencilCost + penCost + eraserCost;
+        System.out.println("Total cost = " + totalCost);
+
+        // Adding 18% GST
+        float gst = totalCost * 0.18f;
+        System.out.println("Total cost after 18% GST = " + (totalCost + gst));
+
         scanner.close();
     }
 }
