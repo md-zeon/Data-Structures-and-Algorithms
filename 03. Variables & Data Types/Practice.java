@@ -13,5 +13,13 @@ public class Practice {
         double average = (A + B + C) / 3;
 
         System.out.println("Average = " + average);
+
+        // ? Question 2: In a program, input the side of a square. You have to output the area of the square.
+        System.out.print("Enter the side of the square: ");
+        float side = scanner.nextFloat();
+        float area = side * side;
+        System.out.println("Area of the square = " + area);
+
+        scanner.close();
     }
 }
