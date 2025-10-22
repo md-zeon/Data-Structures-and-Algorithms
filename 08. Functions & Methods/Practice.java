@@ -34,7 +34,37 @@ public class Practice {
         int number = scanner.nextInt();
         boolean isPalindrome = isPalindrome(number);
         System.out.println("Is " + number + " a palindrome? " + isPalindrome);
+
+        /*
+         * Math Class Methods in Java:
+         * 1. Math.abs(): Returns the absolute value of a number.
+         * 2. Math.ceil(): Rounds a number up to the nearest integer.
+         * 3. Math.floor(): Rounds a number down to the nearest integer.
+         * 4. Math.max(): Returns the larger of two values.
+         * 5. Math.min(): Returns the smaller of two values.
+         * 6. Math.pow(): Raises a number to the power of another number.
+         * 7. Math.sqrt(): Returns the square root of a number.
+         * 8. Math.random(): Returns a random number between 0.0 and 1.0.
+         * 9. Math.round(): Rounds a floating-point number to the nearest integer.
+         * 10. Math.log(): Returns the natural logarithm (base e) of a number. 
+         * 11. Math.exp(): Returns e raised to the power of a given number.
+         * 12. Math.sin(), Math.cos(), Math.tan(): Trigonometric functions that return the sine, cosine, and tangent of an angle (in radians), respectively.
+         * 13. Math.toDegrees() and Math.toRadians(): Convert angles between degrees and radians.
+         * 14. Math.cbrt(): Returns the cube root of a number.
+         * etc.
+         */
+        // Practice using some Math class methods
+        double value = -25.7;
+        System.out.println("Absolute value of " + value + " is: " + Math.abs(value));
+        System.out.println("Ceiling of " + value + " is: " + Math.ceil(value));
+        System.out.println("Floor of " + value + " is: " + Math.floor(value));
+        System.out.println("Square root of 16 is: " + Math.sqrt(16));
+        System.out.println("2 raised to the power of 3 is: " + Math.pow(2, 3));
+        System.out.println("Random number between 0.0 and 1.0: " + Math.random());
+        System.out.println("Hypotenuse of a right triangle with sides 3 and 4 is: " + Math.hypot(3, 4));
+        System.out.println("Cube root of 27 is: " + Math.cbrt(27));
         
+
 
         scanner.close();
     }
