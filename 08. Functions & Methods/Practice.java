@@ -63,8 +63,12 @@ public class Practice {
         System.out.println("Random number between 0.0 and 1.0: " + Math.random());
         System.out.println("Hypotenuse of a right triangle with sides 3 and 4 is: " + Math.hypot(3, 4));
         System.out.println("Cube root of 27 is: " + Math.cbrt(27));
-        
 
+        // Problem 4: Write a Java method to compute the sum of the digits in an integer.
+        System.out.print("Enter an integer to compute the sum of its digits: ");
+        int digitSumNum = scanner.nextInt();
+        int digitSum = computeDigitSum(digitSumNum);
+        System.out.println("The sum of the digits in " + digitSumNum + " is: " + digitSum);
 
         scanner.close();
     }
@@ -88,5 +92,14 @@ public class Practice {
         }
 
         return originalNum == reversedNum;
+    }
+
+    public static int computeDigitSum(int num) {
+        int sum = 0;
+        while (num != 0) {
+            sum += num % 10;
+            num /= 10;
+        }
+        return sum;
     }
 }
