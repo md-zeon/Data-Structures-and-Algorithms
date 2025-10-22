@@ -4,6 +4,36 @@
 
 This module covered the fundamentals of functions and methods in Java, including method definition, parameter passing, return types, function overloading, variable scope, and practical applications. Functions/methods are essential for code organization, reusability, and modular programming.
 
+## Additional Topics Learned
+
+### Binomial Coefficient Calculation
+
+**Logic:** C(n, r) = n! / (r! × (n-r)!)
+
+**Dry Run Example (C(5, 2)):**
+
+- n = 5, r = 2
+- Numerator: 5! = 120
+- Denominator: 2! × 3! = 2 × 6 = 12
+- Result: 120 / 12 = 10
+
+### Swap Values Demonstration
+
+**Logic:** Shows pass-by-value behavior for primitive types.
+
+**Dry Run Example:**
+
+- Original: a = 15, b = 25
+- Inside method: temp = 15, a = 25, b = 15
+- After method: Original variables unchanged (pass-by-value)
+
+### Complex Problem Solving
+
+- **Multi-type method overloading** with different parameter combinations
+- **Input validation** for edge cases (negative numbers, invalid ranges)
+- **Error handling** with meaningful return values (-1 for errors)
+- **Memory management** understanding through call stack visualization
+
 ## Key Topics Learned
 
 ### 1. Method Definition and Syntax
@@ -167,6 +197,14 @@ public static int factorial(int n) {
 
 #### Binary to Decimal
 
+**Logic:** Extract each digit from right to left, multiply by 2^position, and sum them up.
+
+**Dry Run Example (Binary 1101):**
+
+- Binary: 1 1 0 1
+- Position: 3 2 1 0
+- Calculation: (1×2³) + (1×2²) + (0×2¹) + (1×2⁰) = 8 + 4 + 0 + 1 = 13
+
 ```java
 public static void binaryToDecimal(int binaryNum) {
     int decimal = 0, pow = 0;
@@ -183,6 +221,16 @@ public static void binaryToDecimal(int binaryNum) {
 ```
 
 #### Decimal to Binary
+
+**Logic:** Extract remainders when dividing by 2, multiply by 10^position, and sum them up.
+
+**Dry Run Example (Decimal 13):**
+
+- 13 ÷ 2 = 6 remainder 1 → Position 0: 1 × 10⁰ = 1
+- 6 ÷ 2 = 3 remainder 0 → Position 1: 0 × 10¹ = 0
+- 3 ÷ 2 = 1 remainder 1 → Position 2: 1 × 10² = 100
+- 1 ÷ 2 = 0 remainder 1 → Position 3: 1 × 10³ = 1000
+- Binary: 1000 + 100 + 0 + 1 = 1101
 
 ```java
 public static void decimalToBinary(int decimalNum) {
@@ -202,6 +250,16 @@ public static void decimalToBinary(int decimalNum) {
 ### 3. Prime Number Operations
 
 #### Check Prime
+
+**Logic:** Check divisibility from 2 to √n. If any number divides n evenly, it's not prime.
+
+**Dry Run Example (n = 17):**
+
+- Check i = 2: 17 % 2 = 1 (not 0) ✓
+- Check i = 3: 17 % 3 = 2 (not 0) ✓
+- Check i = 4: 17 % 4 = 1 (not 0) ✓
+- √17 ≈ 4.123, so stop checking
+- No divisors found → 17 is prime
 
 ```java
 public static boolean isPrime(int n) {
@@ -231,6 +289,16 @@ public static void printPrimesInRange(int start, int end) {
 
 #### Palindrome Check
 
+**Logic:** Reverse the number and compare with original. If equal, it's a palindrome.
+
+**Dry Run Example (num = 121):**
+
+- Original: 121
+- Step 1: 121 % 10 = 1 → reversed = 0 \* 10 + 1 = 1, num = 12
+- Step 2: 12 % 10 = 2 → reversed = 1 \* 10 + 2 = 12, num = 1
+- Step 3: 1 % 10 = 1 → reversed = 12 \* 10 + 1 = 121, num = 0
+- 121 == 121 → Palindrome
+
 ```java
 public static boolean isPalindrome(int num) {
     int original = num;
@@ -247,6 +315,16 @@ public static boolean isPalindrome(int num) {
 ```
 
 #### Sum of Digits
+
+**Logic:** Extract each digit using modulo 10 and add to sum.
+
+**Dry Run Example (num = 123):**
+
+- Sum = 0, num = 123
+- 123 % 10 = 3 → sum = 0 + 3 = 3, num = 12
+- 12 % 10 = 2 → sum = 3 + 2 = 5, num = 1
+- 1 % 10 = 1 → sum = 5 + 1 = 6, num = 0
+- Final sum = 6
 
 ```java
 public static int computeDigitSum(int num) {
@@ -325,6 +403,17 @@ public static void printValue(String a) {
 ```
 
 ### 2. Recursive Methods
+
+**Logic:** Break problem into smaller subproblems of same type.
+
+**Dry Run Example (factorial(4)):**
+
+- factorial(4) = 4 \* factorial(3)
+- factorial(3) = 3 \* factorial(2)
+- factorial(2) = 2 \* factorial(1)
+- factorial(1) = 1 \* factorial(0)
+- factorial(0) = 1 (base case)
+- Returns: 1 → 1 → 2 → 6 → 24
 
 ```java
 public static int factorialRecursive(int n) {
