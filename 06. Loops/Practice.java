@@ -30,7 +30,7 @@ public class Practice {
         System.out.println("Sum of odd integers: " + sumOdd);
 
 
-        // Write a program to find the factorial of a given number using a loop.
+        // Write a program to find the factorial of a given number.
         System.out.println("Enter a number to find its factorial:");
         int num = scanner.nextInt();
         long factorial = 1;
@@ -38,6 +38,14 @@ public class Practice {
             factorial *= i;
         }
         System.out.println("Factorial of " + num + " is: " + factorial);
+
+        // Write a program to print the multiplication table of a given number.
+        System.out.println("Enter a number to print its multiplication table:");
+        int tableNum = scanner.nextInt();
+        System.out.println("Multiplication table of " + tableNum + ":");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(tableNum + " x " + i + " = " + (tableNum * i));
+        }
 
 
         scanner.close();
