@@ -47,7 +47,17 @@ public class Practice {
             System.out.println(tableNum + " x " + i + " = " + (tableNum * i));
         }
 
+        // System.out.println(i); // This would cause a compilation error since 'i' is not defined in this scope.
 
         scanner.close();
     }
 }
+
+/*
+ * Explanation of Variable Scopes in Java:
+ * In Java, variable scope refers to the context within which a variable is accessible. The main types of variable scopes are:
+ * 1. Local Variables: Variables declared within a method, constructor, or block. They are only accessible within that method, constructor, or block.
+ * 2. Instance Variables: Variables declared within a class but outside any method. They are accessible by all methods in the class and are tied to the instance of the class.
+ * 3. Static Variables: Variables declared with the static keyword within a class but outside any method. They are shared among all instances of the class and can be accessed without creating an instance of the class.
+ * 4. Block Scope: Variables declared within a block (e.g., within curly braces {}) are only accessible within that block.
+ */
