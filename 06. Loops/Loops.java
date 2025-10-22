@@ -67,4 +67,22 @@ public class Loops {
  *   }
  * - To avoid infinite loops, ensure that the loop's condition will eventually evaluate to false.
  * ========================================= 
+ * Break and Continue Statements:
+ * - Break Statement: Used to exit a loop prematurely.
+ *   Example:
+ *   for (int i = 1; i <= 10; i++) {
+ *       if (i == 5) {
+ *           break; // exits the loop when i is 5
+ *       }
+ *       System.out.println(i);
+ *   }
+ * - Continue Statement: Used to skip the current iteration and move to the next iteration of the loop.
+ *   Example:
+ *   for (int i = 1; i <= 10; i++) {
+ *       if (i % 2 == 0) {
+ *           continue; // skips even numbers
+ *       }
+ *       System.out.println(i);
+ *   }
+ * =========================================
  */
