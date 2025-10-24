@@ -130,6 +130,28 @@ public class Patterns {
         }
     }
 
+    public static void diamond_pattern(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print("  ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print("  ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         //? Print HOLLOW RECTANGLE pattern
         /*
@@ -215,6 +237,20 @@ public class Patterns {
           *       *
         * * * * *
          */
-        hollow_rhombus(5);
+        // hollow_rhombus(5);
+
+        //? Diamond Pattern
+        /*
+              *
+            * * * 
+          * * * * *
+        * * * * * * *
+        * * * * * * *
+          * * * * *
+            * * *
+              *
+         */
+
+        diamond_pattern(4);
     }
 }
