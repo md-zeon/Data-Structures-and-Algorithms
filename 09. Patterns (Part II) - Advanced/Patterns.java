@@ -66,6 +66,41 @@ public class Patterns {
         }
     }
 
+
+    public static void butterfly_pattern(int n) {
+        for (int i = 1; i <= n; i++) {
+            // stars
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            // spaces
+            for (int k = 1; k <= 2 * (n - i); k++) {
+                System.out.print("  ");
+            }
+            // stars
+            for (int l = 1; l <= i; l++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+        for (int i = n; i >= 1; i--) {
+            // stars
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            // spaces
+            for (int k = 1; k <= 2 * (n - i); k++) {
+                System.out.print("  ");
+            }
+            // stars
+            for (int l = 1; l <= i; l++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         //? Print HOLLOW RECTANGLE pattern
         /*
@@ -114,6 +149,22 @@ public class Patterns {
         0 1 0 1
         1 0 1 0 1 
         */
-        zero_one_triangle(5);
+        // zero_one_triangle(5);
+
+        //? Butterfly Pattern
+        /*
+
+         *             *
+         * *         * *
+         * * *     * * *
+         * * * * * * * *
+         * * * * * * * *
+         * * *     * * *
+         * *         * *
+         *             *
+
+        */
+
+        butterfly_pattern(5);
     }
 }
