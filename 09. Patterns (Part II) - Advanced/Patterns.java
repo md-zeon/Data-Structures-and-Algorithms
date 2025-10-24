@@ -55,6 +55,17 @@ public class Patterns {
         }
     }
 
+    public static void zero_one_triangle(int n) {
+        for (int i = 1; i <= n; i++) {
+            int binaryNum = i % 2 == 0 ? 0 : 1;
+            for (int j = 1; j <= i; j++) {
+                System.out.print(binaryNum+" ");
+                binaryNum = binaryNum == 0 ? 1 : 0;
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         //? Print HOLLOW RECTANGLE pattern
         /*
@@ -93,7 +104,16 @@ public class Patterns {
         7 8 9 10
         11 12 13 14 15
         */ 
-        floyds_triangle(5);
+        // floyds_triangle(5);
 
+        // 0 - 1 Triangle
+        /*
+        1
+        0 1
+        1 0 1
+        0 1 0 1
+        1 0 1 0 1 
+        */
+        zero_one_triangle(5);
     }
 }
