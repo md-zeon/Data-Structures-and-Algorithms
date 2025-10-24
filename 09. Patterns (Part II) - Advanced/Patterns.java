@@ -17,6 +17,24 @@ public class Patterns {
         }
     }
 
+    public static void inverted_and_rotated_half_pyramid(int n) {
+        int spaces = n - 1;
+        int stars = 1;
+        for (int line = 1; line <= n; line++) {
+            // spaces 
+            for (int i = 1; i <= spaces; i++) {
+                System.out.print("  ");
+            }
+            // stars
+            for (int i = 1; i <= stars; i++) {
+                System.out.print("* ");
+            }
+            spaces--;
+            stars++;
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         //? Print HOLLOW RECTANGLE pattern
         /*
@@ -25,7 +43,26 @@ public class Patterns {
          *       *
          * * * * *
         */
+        // hollow_rectangle(4, 5);
 
-        hollow_rectangle(4, 5);
+        //? Inverted & Rotated Half-Pyramid
+        /*
+              *
+            * *
+          * * *
+        * * * * 
+        */
+
+        // inverted_and_rotated_half_pyramid(4);
+
+        //? Inverted HALF-PYRAMID with numbers
+        /*
+        1 2 3 4 5
+        1 2 3 4
+        1 2 3
+        1 2
+        1
+        */ 
+
     }
 }
