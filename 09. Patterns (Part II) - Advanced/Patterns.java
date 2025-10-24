@@ -44,6 +44,17 @@ public class Patterns {
         }
     }
 
+    public static void floyds_triangle(int n) {
+        int counter = 1;
+        for (int line = 1; line <= n; line++) {
+            for (int num = 1; num <= line; num++) {
+                System.out.print(counter+" ");
+                counter++;
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         //? Print HOLLOW RECTANGLE pattern
         /*
@@ -72,7 +83,17 @@ public class Patterns {
         1 2
         1
         */ 
-        inverted_half_pyramid(5);
+        // inverted_half_pyramid(5);
+
+        //? FLOYD'S Triangle
+        /*
+        1
+        2 3
+        4 5 6
+        7 8 9 10
+        11 12 13 14 15
+        */ 
+        floyds_triangle(5);
 
     }
 }
