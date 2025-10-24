@@ -101,6 +101,18 @@ public class Patterns {
         }
     }
 
+    public static void solid_rhombus(int n) {
+        for (int i = 1; i <= n; i++) {
+            for(int j = 1; j <= n - i; j++) {
+                System.out.print("  ");
+            }
+            for (int k = 1; k <= n; k++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         //? Print HOLLOW RECTANGLE pattern
         /*
@@ -165,6 +177,17 @@ public class Patterns {
 
         */
 
-        butterfly_pattern(5);
+        // butterfly_pattern(5);
+
+        //? Solid Rhombus
+        /*
+                * * * * *  
+              * * * * *
+            * * * * *
+          * * * * *
+        * * * * *
+        */
+
+        solid_rhombus(5);
     }
 }
